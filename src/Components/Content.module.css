@@ -1,0 +1,14 @@
+.content {
+    grid-area: c;
+    background-color: var(--element-background-color);
+    border-radius: var(--element-radius);
+    box-shadow: var(--element-shadow);
+    }
+
+.item {
+    color: red;
+}
+
+.active {
+    color: blue;
+}

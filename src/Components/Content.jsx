@@ -1,7 +1,8 @@
+import classes from './Content.module.css';
 
 const Content = () => {
     return (
-        <div className='content'>
+        <div className={classes.content}>
             <div>
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCZlf5lc5tX-0gY-y94pGS0mQdL-D0lCH2OQ&usqp=CAU' />
             </div>
@@ -14,10 +15,10 @@ const Content = () => {
                     new post
                 </div>
                 <div>
-                    <div>
+                    <div className={`${classes.item} ${classes.active}`}>
                         post 1
                     </div>
-                    <div>
+                    <div className={classes.item}>
                         post 2
                     </div>
                 </div>
