@@ -1,7 +1,7 @@
-import classes from './Content.module.css';
+import classes from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
 
-const Content = () => {
+const Profile = () => {
     return (
         <div>
             <div>
@@ -15,4 +15,4 @@ const Content = () => {
     )
 }
 
-export default Content;
+export default Profile;
