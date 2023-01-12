@@ -5,6 +5,6 @@
     box-shadow: var(--element-shadow);
     }
 
-    .header img {
-        width: 30px;
-      }
+.header img {
+    width: 60px;
+  }

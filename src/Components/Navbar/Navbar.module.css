@@ -5,6 +5,21 @@
     box-shadow: var(--element-shadow);
     }
 
+
 .item {
-    color: green;
-    }
+   margin: 8px;
+}
+
+.item a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    color: rgb(0, 158, 158);
+}
+
+.active {
+    color: rgb(0, 158, 158);
+    margin: 8px;
+}
