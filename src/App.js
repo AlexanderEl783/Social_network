@@ -4,15 +4,19 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
 import Content from './Components/Content/Content';
+import Dialogs from './Components/Dialogs/Dialogs';
 
 
 const App = () => {
   return (
-    <div className='app-wrapper'>
+    <div class='app-wrapper'>
       <Header />
       <Navbar />
-      <Content />
-    </div>
+      <div class='app-wrapper-content'>
+        <Dialogs />
+        {/* <Content /> */}
+      </div>
+    </div >
   );
 }
 
