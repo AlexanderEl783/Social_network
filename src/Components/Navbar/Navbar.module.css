@@ -17,6 +17,7 @@
 
 a:hover {
     color: rgb(0, 158, 158);
+    transition: all 0.2s ease 0s;
 }
 
 .active {
