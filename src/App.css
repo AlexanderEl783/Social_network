@@ -17,17 +17,20 @@ body {
   margin: 30px auto;
   width: 1200px;
   display: grid;
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 60px;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
   grid-template-areas: 
   "h h"
-  "n c";
+  "n c"
+  "z c";
 }
 
 .app-wrapper-content {
   grid-area: c;
+  height: calc(100% - 10px);
   background-color: var(--element-background-color);
   border-radius: var(--element-radius);
   box-shadow: var(--element-shadow);
+  margin-bottom: 10px;
 }
