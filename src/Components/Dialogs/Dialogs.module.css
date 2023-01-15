@@ -22,7 +22,7 @@ a:hover {
     display: flex;
 }
 
-.dialog img{
+.dialog img {
     height: 30px;
     border-radius: 50%;
 }
@@ -34,12 +34,31 @@ a:hover {
     /* display: block; */
 }
 
-
+.messagesArea {
+    height: 300px;
+    width: 600px;
+    border-radius: var(--element-radius);
+    border: solid 1px var(--nav-links-color);
+    overflow: auto;
+    margin-bottom: 20px;
+}
 
 .messages {
     padding: 10px;
 }
 
+.messages textarea {
+    resize: none;
+    height: 100px;
+    width: 600px;
+    border-radius: var(--element-radius);
+}
+
+/* .messages button {
+
+} */
+
 .message {
     padding: 6px;
 }
+

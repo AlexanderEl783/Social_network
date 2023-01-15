@@ -2,6 +2,13 @@
     padding: 10px;
 }
 
+.postBlock textarea {
+    resize: none;
+    height: 100px;
+    width: 600px;
+    border-radius: var(--element-radius);
+}
+
 .myPosts {
     margin-top: 15px;
 }
