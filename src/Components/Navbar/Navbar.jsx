@@ -6,6 +6,8 @@ import Friends from './friends/Friends';
 const setActive = (navData) => navData.isActive ? classes.active : classes.item;
 
 const Navbar = (props) => {
+    let friendsElement = props.data.friends.map((d) => <Friends name={d.name} id={d.id} />)
+
     return (
         <nav className={classes.nav}>
             <div className={classes.item}>
@@ -23,7 +25,12 @@ const Navbar = (props) => {
             <div className={classes.item}>
                 <NavLink to='/Settings' className={setActive}>Settings</NavLink>
             </div>
-            <Friends />
+            <div className={classes.friends}>
+                Friends:
+                <div className={classes.friendsWrapper}>
+                    {friendsElement}
+                </div>
+            </div>
         </nav >
     )
 }

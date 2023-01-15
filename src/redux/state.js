@@ -22,6 +22,15 @@ let state = {
       { id: 3, message: 'Yo' },
     ],
   },
+
+  friendsPage: {
+    friends: [
+      { id: 1, name: 'Lucy' },
+      { id: 2, name: 'Tom' },
+      { id: 3, name: 'Dwain' },
+      { id: 4, name: 'Lucy' },
+    ]
+  }
 }
 
 export default state;
