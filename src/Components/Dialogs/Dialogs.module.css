@@ -18,11 +18,23 @@ a:hover {
 
 .dialog {
     padding: 6px;
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.dialog img{
+    height: 30px;
+    border-radius: 50%;
 }
 
 .dialog a {
     text-decoration: none;
+    margin-left: 10px;
+    /* border: 1px solid blue; */
+    /* display: block; */
 }
+
+
 
 .messages {
     padding: 10px;
