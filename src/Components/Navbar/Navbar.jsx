@@ -1,5 +1,6 @@
 import classes from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
+import Friends from './friends/Friends';
 
 // присвоение класса при нажатии на ссылку
 const setActive = (navData) => navData.isActive ? classes.active : classes.item;
@@ -22,7 +23,8 @@ const Navbar = (props) => {
             <div className={classes.item}>
                 <NavLink to='/Settings' className={setActive}>Settings</NavLink>
             </div>
-        </nav>
+            <Friends />
+        </nav >
     )
 }
 

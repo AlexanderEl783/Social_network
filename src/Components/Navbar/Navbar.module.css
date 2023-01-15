@@ -3,11 +3,13 @@
     background-color: var(--element-background-color);
     border-radius: var(--element-radius);
     box-shadow: var(--element-shadow);
-    }
+    padding: 0 12px;
+    overflow: hidden
+}
 
 
 .item {
-   margin: 8px;
+    margin: 8px 0px;
 }
 
 .item a {
@@ -22,5 +24,34 @@ a:hover {
 
 .active {
     color: rgb(0, 158, 158);
-    margin: 8px;
+}
+
+/* friends */
+.friends {
+    margin: 50px 0 10px 0;
+    font-weight: 500;
+}
+
+.friendsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 10px;
+}
+
+/* .friendsItem {
+
+} */
+
+.friendsItem img {
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.friendsItem p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-block-start: 4px;
+    text-align: center;
 }
