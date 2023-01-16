@@ -6,7 +6,8 @@ let state = {
       { id: 1, message: 'This is text for post #1', likes: '15' },
       { id: 2, message: 'Second post', likes: '7' },
       { id: 3, message: 'post number three', likes: '9' },
-    ]
+    ],
+    newPostText: 'wassup'
   },
 
   dialogsPage: {
@@ -41,6 +42,16 @@ export let addNewPost = (text) => {
   };
 
   state.profilePage.posts.push(newPost);
+  rerenderFull(state);
+}
+
+export let addNewMessage = (text) => {
+
+  let newMessage = {
+    id: 3, message: text
+  };
+
+  state.dialogsPage.messages.push(newMessage);
   rerenderFull(state);
 }
 

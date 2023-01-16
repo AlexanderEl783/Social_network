@@ -10,7 +10,7 @@ const Dialogs = (props) => {
 
     let sendMessage = () => {
         let text = newMessageElement.current.value;
-        console.log(text);
+        props.addNewMessage(text);
     }
 
     let dialogsElement = props.data.dialogs.map((d) => <DialogItem name={d.name} id={d.id} />)
