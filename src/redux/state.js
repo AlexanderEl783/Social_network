@@ -1,3 +1,4 @@
+import { rerenderFull } from "../render";
 
 let state = {
   profilePage: {
@@ -40,6 +41,7 @@ export let addNewPost = (text) => {
   };
 
   state.profilePage.posts.push(newPost);
+  rerenderFull(state);
 }
 
 export default state;

@@ -18,7 +18,6 @@ a:hover {
 
 .dialog {
     padding: 6px;
-    /* border: 1px solid black; */
     display: flex;
 }
 
@@ -30,8 +29,6 @@ a:hover {
 .dialog a {
     text-decoration: none;
     margin-left: 10px;
-    /* border: 1px solid blue; */
-    /* display: block; */
 }
 
 .messagesArea {
