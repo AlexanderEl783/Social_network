@@ -9,12 +9,16 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef();
 
     let sendMessage = () => {
-        let text = newMessageElement.current.value;
-        props.addNewMessage(text);
+        props.addNewMessage();
     }
 
     let dialogsElement = props.data.dialogs.map((d) => <DialogItem name={d.name} id={d.id} />)
     let messagesElement = props.data.messages.map((m) => <Messages message={m.message} />)
+
+    let onMessageCahnge = () => {
+        let text = newMessageElement.current.value;
+        props.updateNewMessageText(text);
+    }
 
     return (
         <div className={classes.dialogs}>
@@ -26,7 +30,7 @@ const Dialogs = (props) => {
                     {messagesElement}
                 </div>
                 <div>
-                    <textarea ref={newMessageElement} placeholder='Text here...'></textarea>
+                    <textarea ref={newMessageElement} placeholder='Text here...' value={props.data.newMessageText} onChange={onMessageCahnge} />
                 </div>
                 <div>
                     <button onClick={sendMessage}>Send message</button>

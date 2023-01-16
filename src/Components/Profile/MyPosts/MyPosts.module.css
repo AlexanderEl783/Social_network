@@ -7,6 +7,7 @@
     height: 100px;
     width: 600px;
     border-radius: var(--element-radius);
+    border: solid 1px var(--border-color);
 }
 
 .myPosts {

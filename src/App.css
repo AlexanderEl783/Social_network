@@ -3,6 +3,7 @@
 --element-background-color: white;
 --element-shadow: 0px 2px 2px 1px rgba(160, 160, 161, 0.2);
 --nav-links-color: rgb(75, 75, 75);
+--border-color: rgb(179, 179, 179);
 }
 
 * {

@@ -7,7 +7,7 @@ let state = {
       { id: 2, message: 'Second post', likes: '7' },
       { id: 3, message: 'post number three', likes: '9' },
     ],
-    newPostText: 'wassup'
+    newPostText: ''
   },
 
   dialogsPage: {
@@ -23,6 +23,7 @@ let state = {
       { id: 2, message: 'How are you' },
       { id: 3, message: 'Yo' },
     ],
+    newMessageText: ''
   },
 
   friendsPage: {
@@ -35,23 +36,35 @@ let state = {
   }
 }
 
-export let addNewPost = (text) => {
+window.state = state;
 
+export let addNewPost = () => {
   let newPost = {
-    id: 4, message: text, likes: 0
+    id: 4, message: state.profilePage.newPostText, likes: 0
   };
 
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
   rerenderFull(state);
 }
 
-export let addNewMessage = (text) => {
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderFull(state);
+}
 
+export let addNewMessage = () => {
   let newMessage = {
-    id: 3, message: text
+    id: 3, message: state.dialogsPage.newMessageText
   };
 
   state.dialogsPage.messages.push(newMessage);
+  state.dialogsPage.newMessageText = '';
+  rerenderFull(state);
+}
+
+export let updateNewMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
   rerenderFull(state);
 }
 
