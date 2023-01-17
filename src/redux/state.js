@@ -1,4 +1,6 @@
-import { rerenderFull } from "../render";
+let rerenderFull = () => {
+  console.log('state change');
+}
 
 let state = {
   profilePage: {
@@ -48,12 +50,12 @@ export let addNewPost = () => {
   rerenderFull(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
   rerenderFull(state);
 }
 
-export let addNewMessage = () => {
+export const addNewMessage = () => {
   let newMessage = {
     id: 3, message: state.dialogsPage.newMessageText
   };
@@ -63,9 +65,13 @@ export let addNewMessage = () => {
   rerenderFull(state);
 }
 
-export let updateNewMessageText = (newText) => {
+export const updateNewMessageText = (newText) => {
   state.dialogsPage.newMessageText = newText;
   rerenderFull(state);
+}
+
+export const subscibe = (observer) => {
+  rerenderFull = observer;
 }
 
 export default state;
