@@ -14,10 +14,7 @@ let rerenderFull = (state) => {
       <BrowserRouter>
         <App
           appState={state}
-          addNewPost={store.addNewPost.bind(store)}
-          addNewMessage={store.addNewMessage.bind(store)}
-          updateNewPostText={store.updateNewPostText.bind(store)}
-          updateNewMessageText={store.updateNewMessageText.bind(store)} />
+          dispatch={ store.dispatch.bind(store)} />
       </BrowserRouter>
     </React.StrictMode>
   );

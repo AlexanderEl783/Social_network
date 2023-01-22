@@ -9,7 +9,7 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef();
 
     let sendMessage = () => {
-        props.addNewMessage();
+        props.dispatch({ type: 'ADD-NEW-MESSAGE' });
     }
 
     let dialogsElement = props.data.dialogs.map((d) => <DialogItem name={d.name} id={d.id} />)
@@ -17,7 +17,7 @@ const Dialogs = (props) => {
 
     let onMessageCahnge = () => {
         let text = newMessageElement.current.value;
-        props.updateNewMessageText(text);
+        props.dispatch({ type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text });
     }
 
     return (
