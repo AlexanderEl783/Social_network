@@ -1,19 +1,20 @@
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import React from 'react';
-
+import { addPostActionCreator, updatePostActionCreator } from '../../../redux/state';
 
 const MyPosts = (props) => {
     let postsElement = props.posts.map((p) => <Post message={p.message} likes={p.likes} />);
 
     let newPostElement = React.createRef();
     let addPost = () => {
-        props.dispatch({ type: 'ADD-NEW-POST' });
+        props.dispatch(addPostActionCreator());
     };
 
     let onPostCahnge = () => {
         let text = newPostElement.current.value;
-        props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
+        let action = updatePostActionCreator(text);
+        props.dispatch(action);
     }
 
     return (
